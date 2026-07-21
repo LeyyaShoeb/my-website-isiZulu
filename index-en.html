@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Pan Afrikan Colour System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kigelia&family=Questrial&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=4" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo">The Pan Afrikan Colour System</a>
+  <div class="nav-links">
+    <a href="#colours">Colours</a>
+    <a href="our-system-en.html">Our System</a>
+    <a href="#pairings" onclick="switchCtxTab('pairings-tab')">Pairings</a>
+    <a href="#pairings" onclick="switchCtxTab('values-tab')">Values</a>
+    <a href="#generator">Generator</a>
+    <a href="#generator" onclick="switchGenTab('picker')">Recolour</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-bg" src="images/HERO1.png" alt="" />
+  <div class="hero-content">
+    <p class="hero-eyebrow">Decolonising Design</p>
+    <h1>Colour Rooted in<br>Afrikan Culture</h1>
+  </div>
+</section>
+
+<!-- INTRO / ABOUT -->
+<section class="intro">
+  <div class="intro-col">
+    <p class="intro-label">About</p>
+    <p>Redefining the Western colour palette system by creating our own, rooted in Afrikan culture and meaning.</p>
+  </div>
+  <div class="intro-col">
+    <p class="intro-label">The System</p>
+    <p>Five tribes from all regions of Afrika. Six colours with varying tones. Every tone carries a name, a meaning, and a material origin.</p>
+  </div>
+</section>
+
+<!-- COLOUR SYSTEM -->
+<section id="colours" class="colours-section">
+  <div class="section-header">
+    <h2>The Pan Afrikan Colour System</h2>
+    <p>Click any swatch to reveal its name, meaning, and material origin. Five Tribes — Oromo, Hausa, Amazigh, Ndebele, and Batwa.</p>
+  </div>
+  <div class="colour-grid" id="colour-grid"></div>
+</section>
+
+<!-- OUR COLOUR SYSTEM APPLIED — ARTWORK (3 images) -->
+<section class="applied-section">
+  <div class="section-header">
+    <h2>Our Colour System Applied</h2>
+    <p>Moenie baiza nie — township slang for don't fail, stand your ground — is a saying carried by communities like Eldorado Park, long shaped by gun and gang violence. The smoke left after a gun is fired became the form: a fluid, organic object that transforms an instrument of harm into a symbol of resilience. The three images below show the Hausa colour system applied to that same form — because colour is never neutral. It carries memory, identity, and meaning, and in the right hands it can turn something heavy into something that holds people up.</p>
+  </div>
+  <div class="proof-3up">
+    <div class="proof-block proof-block--tall">
+      <img src="images/Artwork 1.png" alt="Artwork 1" onerror="this.style.display='none';this.parentElement.setAttribute('data-empty','true')" />
+    </div>
+    <div class="proof-block proof-block--tall">
+      <img src="images/Artwork 2.png" alt="Artwork 2" onerror="this.style.display='none';this.parentElement.setAttribute('data-empty','true')" />
+    </div>
+    <div class="proof-block proof-block--tall">
+      <img src="images/Artwork 3.png" alt="Artwork 3" onerror="this.style.display='none';this.parentElement.setAttribute('data-empty','true')" />
+    </div>
+  </div>
+
+</section>
+
+<!-- COLOUR IN CONTEXT — PAIRINGS + VALUES AS TABS -->
+<section id="pairings" class="pairings-section">
+  <div class="section-header">
+    <h2>Colour in Context</h2>
+    <p>How the tribes use colour together. The rules and pairings that carry meaning.</p>
+  </div>
+
+  <div class="context-tabs" id="context-tabs">
+    <button class="context-tab active" data-ctx="pairings-tab">Colour Pairings</button>
+    <button class="context-tab" data-ctx="values-tab">Colour Values</button>
+  </div>
+
+  <div id="pairings-tab" class="context-tab-content active">
+    <div id="pairings-content"></div>
+  </div>
+
+  <div id="values-tab" class="context-tab-content">
+    <div class="section-header" style="padding-top:40px;">
+      <p>Ndebele colours strengthened from original to black, across ten tonal steps.</p>
+    </div>
+    <div id="values-content"></div>
+    <div class="section-header" style="padding-top:40px;">
+      <p>Ndebele colours spiritually enhanced from original to white, across ten tonal steps.</p>
+    </div>
+    <div id="values-content-white"></div>
+  </div>
+</section>
+
+
+<!-- GENERATOR -->
+<section id="generator" class="generator-section">
+  <div class="section-header">
+    <h2>Try It Out!</h2>
+    <p>What story are you trying to tell?</p>
+  </div>
+
+  <div class="generator-body">
+    <div class="generator-tabs">
+      <button class="gen-tab active" data-tab="consultation">Palette Generator</button>
+      <button class="gen-tab" data-tab="picker">Colour Picker</button>
+    </div>
+
+    <div id="consultation-tab" class="gen-tab-content active">
+      <p class="gen-instruction">Choose the tags that align with your story</p>
+      <div id="meaning-buttons" class="meaning-buttons"></div>
+      <div class="gen-size-row">
+        <p class="gen-size-label">Select the size of your colour palette</p>
+        <div id="size-buttons" class="size-buttons"></div>
+      </div>
+      <div class="gen-controls">
+        <div class="gen-controls-row">
+          <button id="clear-btn" class="gen-btn-clear">Clear</button>
+          <button id="generate-btn" class="gen-btn-done">Done</button>
+        </div>
+      </div>
+      <div id="generated-palette" class="generated-palette"></div>
+    </div>
+
+    <div id="picker-tab" class="gen-tab-content">
+      <div class="picker-layout">
+        <div class="picker-left">
+          <p class="picker-hint">Click on a region then click on a colour from the colour wheel to apply it.</p>
+          <label for="image-upload">Upload image</label>
+          <input type="file" id="image-upload" accept="image/*" />
+          <canvas id="artwork-canvas"></canvas>
+          <button class="picker-reset-btn" id="picker-reset-btn">Reset image</button>
+        </div>
+        <div class="picker-right">
+          <canvas id="wheel-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>The Pan Afrikan Colour System</p>
+  <p>Five Tribes · Six Colour Families</p>
+</footer>
+
+<!-- SWATCH TOOLTIP -->
+<div class="tooltip-overlay" id="tooltip" onclick="closeTooltip(event)">
+  <div class="tooltip-card" onclick="event.stopPropagation()">
+    <button class="tooltip-close" onclick="closeTooltip()">×</button>
+    <div class="tooltip-swatch" id="tooltip-swatch"></div>
+    <div class="tooltip-tribe" id="tooltip-tribe"></div>
+    <h3 class="tooltip-name" id="tooltip-name"></h3>
+    <p class="tooltip-hex" id="tooltip-hex"></p>
+    <div class="tooltip-row">
+      <div>
+        <p class="tooltip-label">Meaning</p>
+        <p class="tooltip-text" id="tooltip-meaning"></p>
+      </div>
+      <div>
+        <p class="tooltip-label">Material Origin</p>
+        <p class="tooltip-text" id="tooltip-origin"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts-en.js?v=3"></script>
+</body>
+</html>

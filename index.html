@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uhlelo Lwemibala LwaseAfrika Yonke</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kigelia&family=Questrial&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo">Uhlelo Lwemibala LwaseAfrika Yonke</a>
+  <div class="nav-links">
+    <a href="#colours">Imibala</a>
+    <a href="our-system.html">Uhlelo Lwethu</a>
+    <a href="#pairings" onclick="switchCtxTab('pairings-tab')">Ukuhlanganiswa</a>
+    <a href="#pairings" onclick="switchCtxTab('values-tab')">Amanani</a>
+    <a href="#generator">Umkhiqizi</a>
+    <a href="#generator" onclick="switchGenTab('picker')">Phinda Ufake Umbala</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-bg" src="images/HERO1.png" alt="" />
+  <div class="hero-content">
+    <p class="hero-eyebrow">Ukudidiyela Ukuyila Ngaphandle Kobukoloni</p>
+    <h1>Umbala Onemizi<br>Kwisiko LaseAfrika</h1>
+  </div>
+</section>
+
+<!-- INTRO / ABOUT -->
+<section class="intro">
+  <div class="intro-col">
+    <p class="intro-label">Mayelana</p>
+    <p>Sishintsha uhlelo lwepaleti yemibala laseNtshonalanga ngokudala elabo, elineziqu esikweni nasencazelweni yaseAfrika.</p>
+  </div>
+  <div class="intro-col">
+    <p class="intro-label">Uhlelo</p>
+    <p>Izinhlanga ezinhlanu ezivela kuzo zonke izifunda zaseAfrika. Imibala eyisithupha enamathoni ahlukahlukene. Wonke umathoni uphatha igama, incazelo, nomthombo wezinto.</p>
+  </div>
+</section>
+
+<!-- COLOUR SYSTEM -->
+<section id="colours" class="colours-section">
+  <div class="section-header">
+    <h2>Uhlelo Lwemibala LwaseAfrika Yonke</h2>
+    <p>Chofoza isampula nganoma iluphi ukuveza igama layo, incazelo, nomthombo wezinto. Izinhlanga Ezinhlanu — Oromo, Hausa, Amazigh, Ndebele, noBatwa.</p>
+  </div>
+  <div class="colour-grid" id="colour-grid"></div>
+</section>
+
+<!-- OUR COLOUR SYSTEM APPLIED — ARTWORK (3 images) -->
+<section class="applied-section">
+  <div class="section-header">
+    <h2>Uhlelo Lwethu Lwemibala Lusebenza</h2>
+    <p>Moenie baiza nie — inkulumo yase-township esho ukuthi ungehluleki, zima kuzwi lakho — iwumlando wezo ndawo ezifana naseEldorado Park, ezibekelwe isikhathi eside izibhamu negciwane lobugebengu. Umusi oshiyeka emuva kokudubulwa kwesibhamu waba yisimo: into ephilayo, yemvelo, eguqula ithuluzi lokulimaza ibe uphawu lwenqubekela phambili. Izithombe ezintathu ezingezansi zibonisa uhlelo lwemibala yamaHausa lusebenza kuleso simo — ngoba umbala awukaze unganaki. Uphatha ukukhumbula, ubunjalo, nencazelo, futhi ezandleni ezifanele ungaguqula okusindayo kube yinto ebamba abantu phezulu.</p>
+  </div>
+  <div class="proof-3up">
+    <div class="proof-block proof-block--tall">
+      <img src="images/Artwork 1.png" alt="Imisebenzi 1" onerror="this.style.display='none';this.parentElement.setAttribute('data-empty','true')" />
+    </div>
+    <div class="proof-block proof-block--tall">
+      <img src="images/Artwork 2.png" alt="Imisebenzi 2" onerror="this.style.display='none';this.parentElement.setAttribute('data-empty','true')" />
+    </div>
+    <div class="proof-block proof-block--tall">
+      <img src="images/Artwork 3.png" alt="Imisebenzi 3" onerror="this.style.display='none';this.parentElement.setAttribute('data-empty','true')" />
+    </div>
+  </div>
+
+</section>
+
+<!-- COLOUR IN CONTEXT — PAIRINGS + VALUES AS TABS -->
+<section id="pairings" class="pairings-section">
+  <div class="section-header">
+    <h2>Umbala Ngomongo</h2>
+    <p>Indlela izinhlanga ezisebenzisa ngayo umbala ndawonye. Imithetho nokuhlanganiswa okuthwala incazelo.</p>
+  </div>
+
+  <div class="context-tabs" id="context-tabs">
+    <button class="context-tab active" data-ctx="pairings-tab">Ukuhlanganiswa Kwemibala</button>
+    <button class="context-tab" data-ctx="values-tab">Amanani Emibala</button>
+  </div>
+
+  <div id="pairings-tab" class="context-tab-content active">
+    <div id="pairings-content"></div>
+  </div>
+
+  <div id="values-tab" class="context-tab-content">
+    <div class="section-header" style="padding-top:40px;">
+      <p>Imibala yamaNdebele eqinisiwe kusukela kwasokusenjwa kuya emnyameni, kulandela izinyathelo eziyishumi zamatoni.</p>
+    </div>
+    <div id="values-content"></div>
+    <div class="section-header" style="padding-top:40px;">
+      <p>Imibala yamaNdebele ekhulisiwe ngokomoya kusukela kwasokusenjwa kuya emhlophe, kulandela izinyathelo eziyishumi zamatoni.</p>
+    </div>
+    <div id="values-content-white"></div>
+  </div>
+</section>
+
+
+<!-- GENERATOR -->
+<section id="generator" class="generator-section">
+  <div class="section-header">
+    <h2>Zama!</h2>
+    <p>Yiziphi izindaba ozama ukuchaza?</p>
+  </div>
+
+  <div class="generator-body">
+    <div class="generator-tabs">
+      <button class="gen-tab active" data-tab="consultation">Umkhiqizi Wepaleti</button>
+      <button class="gen-tab" data-tab="picker">Ukukhetha Umbala</button>
+    </div>
+
+    <div id="consultation-tab" class="gen-tab-content active">
+      <p class="gen-instruction">Khetha izinhlamvu ezihambelana nendaba yakho</p>
+      <div id="meaning-buttons" class="meaning-buttons"></div>
+      <div class="gen-size-row">
+        <p class="gen-size-label">Khetha usayizi wepaleti yakho yemibala</p>
+        <div id="size-buttons" class="size-buttons"></div>
+      </div>
+      <div class="gen-controls">
+        <div class="gen-controls-row">
+          <button id="clear-btn" class="gen-btn-clear">Sula</button>
+          <button id="generate-btn" class="gen-btn-done">Qedile</button>
+        </div>
+      </div>
+      <div id="generated-palette" class="generated-palette"></div>
+    </div>
+
+    <div id="picker-tab" class="gen-tab-content">
+      <div class="picker-layout">
+        <div class="picker-left">
+          <p class="picker-hint">Chofoza indawo bese uchofoza umbala evolveni yemibala ukuwusebenzisa.</p>
+          <label for="image-upload">Layisha isithombe</label>
+          <input type="file" id="image-upload" accept="image/*" />
+          <canvas id="artwork-canvas"></canvas>
+          <button class="picker-reset-btn" id="picker-reset-btn">Buyisela isithombe</button>
+        </div>
+        <div class="picker-right">
+          <canvas id="wheel-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Uhlelo Lwemibala LwaseAfrika Yonke</p>
+  <p>Izinhlanga Ezinhlanu · Izindawo Eziyisithupha Zemibala</p>
+</footer>
+
+<!-- SWATCH TOOLTIP -->
+<div class="tooltip-overlay" id="tooltip" onclick="closeTooltip(event)">
+  <div class="tooltip-card" onclick="event.stopPropagation()">
+    <button class="tooltip-close" onclick="closeTooltip()">×</button>
+    <div class="tooltip-swatch" id="tooltip-swatch"></div>
+    <div class="tooltip-tribe" id="tooltip-tribe"></div>
+    <h3 class="tooltip-name" id="tooltip-name"></h3>
+    <p class="tooltip-hex" id="tooltip-hex"></p>
+    <div class="tooltip-row">
+      <div>
+        <p class="tooltip-label">Incazelo</p>
+        <p class="tooltip-text" id="tooltip-meaning"></p>
+      </div>
+      <div>
+        <p class="tooltip-label">Umthombo Wezinto</p>
+        <p class="tooltip-text" id="tooltip-origin"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
