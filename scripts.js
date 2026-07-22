@@ -695,3 +695,5 @@ buildGrid();
 buildPairings();
 buildValues();
 buildGenerator();
+drawWheel();
+initWheelHover();
